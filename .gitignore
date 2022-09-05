@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+build
+/.gradle
+.idea
+APP
+.env
+bin/
+xray/
+rerun/
+.DS_Store
+builds
+Test.feature
+xray-auth.json
