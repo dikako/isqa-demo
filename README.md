@@ -10,7 +10,6 @@
 - https://www.instagram.com/stockbit/
 - https://www.instagram.com/stockbit.my/
 - https://www.instagram.com/bibit.id/
-- 
 - https://www.instagram.com/dikako.ko/
 
 Thankyou ISQA!
