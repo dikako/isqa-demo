@@ -12,5 +12,13 @@
 - https://www.instagram.com/bibit.id/
 - https://www.instagram.com/dikako.ko/
 
-Thankyou ISQA!
 
+Demo Video
+
+
+
+https://user-images.githubusercontent.com/49613928/188487106-c60d029b-ac0a-4bbd-91d4-9f23f73b5e1b.mp4
+
+
+
+Thankyou ISQA!
