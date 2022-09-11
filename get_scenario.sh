@@ -11,6 +11,9 @@ while getopts ":ix:ej:" option; do
         j) JSON_NAME=${OPTARG} ;;
     esac
 done
+XRAY_URL=https://xray.cloud.getxray.app/api/v2
+XRAY_CLIENT_ID=<your-xray-clien-id>
+XRAY_CLIENT_SECRET=<your-xray-clien-secret>
 function get_xray_token() {
     token=$(curl -s -H "Content-Type: application/json" -X POST --data "{\"client_id\": \"$XRAY_CLIENT_ID\",\"client_secret\": \"$XRAY_CLIENT_SECRET\"}" "$XRAY_URL"/authenticate| tr -d '"')
 }

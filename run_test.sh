@@ -9,7 +9,7 @@ echo "================================================="
 echo "Import Scenario from xray with jira code [DP-186]"
 echo "================================================="
 TAGS=DP-186
-sh get_scenario.sh -i -x DP-186
+sh get_scenario.sh -i -x $TAGS
 
 echo "===================================="
 echo "Run Test execution with tag @DP-186"
@@ -28,7 +28,7 @@ echo "______________ ___    _____    _______   ____  __._____.___.________   ___
         |____|  \___|_  /\____|__  /\____|__  /____|__ \ / ______|\_______  /______/  __
                       \/         \/         \/        \/ \/               \/          \/"
 
-
+echo "https://stockbit.atlassian.net/browse/$TAGS"
 
 
 
