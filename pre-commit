@@ -7,3 +7,8 @@ modified_files=$(git diff --cached --name-only --diff-filter=AM -- '*.java')
 if [ -n "$modified_files" ]; then
     ./libs/pmd-bin-6.52.0/bin/run.sh pmd -d "$modified_files" -R pmd/rules.xml -f text | awk '{ print NR ": " $0 }'
 fi
+
+if [ $? -ne 0 ]; then
+  echo "PMD found errors, cancelling commit"
+  exit 1
+fi

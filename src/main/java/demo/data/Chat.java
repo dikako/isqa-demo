@@ -15,6 +15,8 @@ public class Chat {
     private static String test;
     private static String tests;
     private static String testss;
+    private static String testsdds;
+    private static String tttestss;
 
     public static void setChatMessage(String chatMessage) {
         Chat.chatMessage = chatMessage;
