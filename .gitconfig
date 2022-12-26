@@ -1,0 +1,6 @@
+[modified]
+files = git diff --name-only HEAD
+echo files
+[alias]
+add = !sh -c './libs/pmd-bin-6.52.0/bin/run.sh pmd -d "$modified_files.files" -R pmd/rules.xml -f text | awk '{ print NR ": " $0 }''
+

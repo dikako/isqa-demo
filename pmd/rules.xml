@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PMD rules"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+    <description>Mandatory PMD rules description.</description>
+
+    <!--region Best practices -->
+    <rule ref="category/java/bestpractices.xml">
+        <exclude name="LooseCoupling"/>
+        <exclude name="GuardLogStatement"/>
+        <exclude name="AvoidPrintStackTrace"/>
+        <exclude name="JUnit4TestShouldUseBeforeAnnotation"/>
+        <exclude name="JUnit4TestShouldUseAfterAnnotation"/>
+        <exclude name="LiteralsFirstInComparisons"/>
+        <exclude name="MissingOverride"/>
+        <exclude name="PreserveStackTrace"/>
+        <exclude name="ForLoopCanBeForeach"/>
+        <exclude name="AvoidReassigningLoopVariables"/>
+        <exclude name="AvoidStringBufferField"/>
+    </rule>
+    <!--endregion-->
+
+    <!--region Code Style -->
+    <rule ref="category/java/codestyle.xml">
+        <exclude name="MethodArgumentCouldBeFinal"/>
+        <exclude name="LinguisticNaming"/>
+        <exclude name="ShortVariable"/>
+        <exclude name="LongVariable"/>
+        <exclude name="ShortMethodName"/>
+        <exclude name="LocalVariableCouldBeFinal"/>
+        <exclude name="AtLeastOneConstructor"/>
+        <exclude name="UseDiamondOperator"/>
+        <exclude name="ControlStatementBraces"/>
+        <exclude name="UseUnderscoresInNumericLiterals"/>
+        <exclude name="PackageCase"/>
+        <exclude name="UnnecessaryLocalBeforeReturn"/>
+        <exclude name="CallSuperInConstructor"/>
+        <exclude name="ConfusingTernary"/>
+        <exclude name="OnlyOneReturn"/>
+        <exclude name="PrematureDeclaration"/>
+        <exclude name="CommentDefaultAccessModifier"/>
+    </rule>
+
+    <rule ref="category/java/codestyle.xml/ClassNamingConventions">
+        <properties>
+            <property name="classPattern" value="[A-Z][a-zA-Z0-9]*"/>
+            <property name="abstractClassPattern" value="[A-Z][a-zA-Z0-9]*"/>
+            <property name="interfacePattern" value="[A-Z][a-zA-Z0-9]*"/>
+            <property name="enumPattern" value="[A-Z][a-zA-Z0-9]*"/>
+            <property name="annotationPattern" value="[A-Z][a-zA-Z0-9]*"/>
+            <property name="utilityClassPattern" value="[A-Z][a-zA-Z0-9]*"/>
+        </properties>
+    </rule>
+
+    <rule ref="category/java/codestyle.xml/FieldNamingConventions">
+        <properties>
+            <property name="publicConstantPattern" value="[a-zA-Z][a-zA-Z_0-9]*"/>
+            <property name="constantPattern" value="[A-Z][A-Z_0-9]*"/>
+            <property name="enumConstantPattern" value="[A-Z][A-Z_0-9]*"/>
+            <property name="finalFieldPattern" value="[a-z][a-zA-Z0-9]*"/>
+            <property name="staticFieldPattern" value="[a-z][a-zA-Z0-9]*"/>
+            <property name="defaultFieldPattern" value="[a-z][a-zA-Z0-9]*"/>
+            <property name="exclusions" value="serialVersionUID|serialPersistentFields"/>
+        </properties>
+    </rule>
+
+    <rule ref="category/java/codestyle.xml/FormalParameterNamingConventions">
+        <properties>
+            <property name="methodParameterPattern" value="[a-z][a-zA-Z0-9_]*"/>
+            <property name="finalMethodParameterPattern" value="[a-z][a-zA-Z0-9]*"/>
+            <property name="lambdaParameterPattern" value="[a-z][a-zA-Z0-9]*"/>
+            <property name="explicitLambdaParameterPattern" value="[a-z][a-zA-Z0-9]*"/>
+        </properties>
+    </rule>
+
+    <rule ref="category/java/codestyle.xml/LocalVariableNamingConventions">
+        <properties>
+            <property name="localVarPattern" value="[a-z][a-zA-Z0-9_]*"/>
+            <property name="finalVarPattern" value="[a-z][a-zA-Z0-9]*"/>
+            <property name="catchParameterPattern" value="[a-z][a-zA-Z0-9]*"/>
+        </properties>
+    </rule>
+
+    <rule ref="category/java/codestyle.xml/MethodNamingConventions">
+        <properties>
+            <property name="methodPattern" value="[a-z][a-zA-Z0-9]*"/>
+            <property name="staticPattern" value="[a-z][a-zA-Z0-9]*"/>
+            <property name="nativePattern" value="[a-z][a-zA-Z0-9]*"/>
+        </properties>
+    </rule>
+    <!--endregion-->
+
+</ruleset>

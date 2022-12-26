@@ -103,4 +103,5 @@ public class Demo extends BasePageObject {
     public boolean isAlert(String alert) {
         return isPresent("ALERT", alert);
     }
+
 }
