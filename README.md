@@ -1,5 +1,13 @@
 ![image](https://user-images.githubusercontent.com/49613928/188483782-b4862a08-0fb7-4db8-a077-966fbe1c46ce.png)
 
+## How to Run
+- Install JDK 8
+- Install Appium
+- Setup xray cliend id and client secret in get_scenario.sh
+- rename .env_sample to .env
+- Changes JIRA CODE in run_test.sh
+- sh run_test.sh
+
 
 ## Visit:
 - https://stockbit.com
