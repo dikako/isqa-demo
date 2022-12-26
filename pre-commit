@@ -5,8 +5,5 @@ modified_files=$(git diff --cached --name-only --diff-filter=AM -- '*.java')
 
 # Run PMD on the modified files
 if [ -n "$modified_files" ]; then
-    ./libs/pmd-bin-6.52.0/bin/run.sh pmd -d "$modified_files" -R ruleset.xml -f text | awk '{ print NR ": " $0 }'
-else
-  echo "Please fix this before commit to repository!"
-  exit 0;
+    ./libs/pmd-bin-6.52.0/bin/run.sh pmd -d "$modified_files" -R pmd/rules.xml -f text | awk '{ print NR ": " $0 }'
 fi
