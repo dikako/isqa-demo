@@ -3,7 +3,7 @@
          xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
          xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
 
-    <description>Mandatory PMD rules description.</description>
+    <description>Mandatory PMD rules for automation script</description>
 
     <!--region Best practices -->
     <rule ref="category/java/bestpractices.xml">
@@ -40,6 +40,7 @@
         <exclude name="OnlyOneReturn"/>
         <exclude name="PrematureDeclaration"/>
         <exclude name="CommentDefaultAccessModifier"/>
+        <exclude name="ShortClassName"/>
     </rule>
 
     <rule ref="category/java/codestyle.xml/ClassNamingConventions">
