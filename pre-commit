@@ -1,13 +1,17 @@
 #!/bin/bash
 
-# Get the list of modified Java files
-modified_files=$(git diff --name-status -- '*.java')
+# Get the list of modified, added, deleted, or renamed files
+files=$(git diff --name-only --diff-filter=MARND)
 
-echo "$modified_files"
+# If there are no changed files, exit
+if [ -z "$files" ]; then
+    exit 0
+fi
 
-# Run PMD on the modified files
-if [ -n "$modified_files" ]; then
-    ./libs/pmd-bin-6.52.0/bin/run.sh pmd -d "$modified_files" -R pmd/rules.xml -f text | awk '{ print NR ": " $0 }'
-    echo -e "\033[31mPMD found errors, cancelling commit! Please fix first!\033[0m"
+# Run PMD on the changed files
+pmd -d . -R pmd-ruleset.xml "$files"
+
+# If PMD found any issues, exit with a non-zero code
+if [ $? -ne 0 ]; then
     exit 1
 fi
