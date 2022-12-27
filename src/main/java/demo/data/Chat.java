@@ -14,7 +14,6 @@ public class ChatData {
     private static String receiverUser;
     private static String test;
     private static String tests;
-    private static String testss;
 
     public static void setChatMessage(String chatMessage) {
         ChatData.chatMessage = chatMessage;
