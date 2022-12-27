@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Run PMD on the files being committed
-./libs/pmd-bin-6.52.0/bin/run.sh pmd -d src -R pmd/rules.xml | awk '{ print NR ": " $0 }'
+pmd=$(./libs/pmd-bin-6.52.0/bin/run.sh pmd -d src -R pmd/rules.xml | awk '{ print NR ": " $0 }')
 
 # Check the exit code of PMD
-if [ $? -ne 0 ]; then
+if [ -z "$pmd" ]; then
     # PMD found issues, so exit with a non-zero code to prevent the commit
     echo -e "\033[31mPMD get error, please fix first!\033[0m"
     exit 1
