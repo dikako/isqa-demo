@@ -12,6 +12,7 @@ public class Chat {
     private static String receiverChat;
     private static String senderUser;
     private static String receiverUser;
+    private static String test;
 
     public static void setChatMessage(String chatMessage) {
         Chat.chatMessage = chatMessage;
