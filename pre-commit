@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get the list of modified, added, deleted, or renamed files
-files=$(git diff --name-only --diff-filter=MARND)
+files=$(git diff --name-only --diff-filter=MARD -- '*.java')
 
 # If there are no changed files, exit
 if [ -z "$files" ]; then
