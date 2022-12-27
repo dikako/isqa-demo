@@ -9,7 +9,7 @@ if [ -z "$files" ]; then
 fi
 
 # Run PMD on the changed files
-pmd -d . -R pmd-ruleset.xml "$files"
+./libs/pmd-bin-6.52.0/bin/run.sh pmd -d . -R pmd/rules.xml "$files" -f text | awk '{ print NR ": " $0 }'
 
 # If PMD found any issues, exit with a non-zero code
 if [ $? -ne 0 ]; then
