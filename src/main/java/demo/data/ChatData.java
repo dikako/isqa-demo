@@ -3,7 +3,7 @@ package demo.data;
 /**
  * Created by fransiskusandika 05/07/2022
  */
-public class Chat {
+public class ChatData {
 
     private static String chatMessage = "Test chat " + Data.randomNum;
     private static String chatEmoji;
@@ -16,7 +16,7 @@ public class Chat {
     private static String tests;
 
     public static void setChatMessage(String chatMessage) {
-        Chat.chatMessage = chatMessage;
+        ChatData.chatMessage = chatMessage;
     }
 
     public static String getChatMessage() {
@@ -24,7 +24,7 @@ public class Chat {
     }
 
     public static void setChatEmoji(String emoji) {
-        Chat.chatEmoji = emoji;
+        ChatData.chatEmoji = emoji;
     }
 
     public static String getChatEmoji() {
@@ -32,7 +32,7 @@ public class Chat {
     }
 
     public static void setUsername(String username) {
-        Chat.username = username;
+        ChatData.username = username;
     }
 
     public static String getUsername() {
@@ -40,7 +40,7 @@ public class Chat {
     }
 
     public static void setSenderChat(String senderChat) {
-        Chat.senderChat = senderChat;
+        ChatData.senderChat = senderChat;
     }
 
     public static String getSenderChat() {
@@ -48,7 +48,7 @@ public class Chat {
     }
 
     public static void setReceiverChat(String receiverChat) {
-        Chat.receiverChat = receiverChat;
+        ChatData.receiverChat = receiverChat;
     }
 
     public static String getReceiverChat() {
@@ -56,7 +56,7 @@ public class Chat {
     }
 
     public static void setSenderUser(String senderUser) {
-        Chat.senderUser = senderUser;
+        ChatData.senderUser = senderUser;
     }
 
     public static String getSenderUser() {
@@ -64,7 +64,7 @@ public class Chat {
     }
 
     public static void setReceiverUser(String receiverUser) {
-        Chat.receiverUser = receiverUser;
+        ChatData.receiverUser = receiverUser;
     }
 
     public static String getReceiverUser() {
