@@ -3,7 +3,7 @@
 ## How to Run
 - Install JDK 8
 - Install Appium
-- Setup xray cliend id and client secret in get_scenario.sh
+- Setup xray client id and client secret in get_scenario.sh
 - rename .env_sample to .env
 - Changes JIRA CODE in run_test.sh
 - sh run_test.sh
